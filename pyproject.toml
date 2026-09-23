@@ -1,0 +1,15 @@
+[project]
+name = "student-manager"
+version = "1.0.0"
+dependencies = [
+    "flet"
+]
+requires-python = ">=3.11"
+
+[tool.flet]
+dist-name = "student-manager"
+
+[tool.flet.splash]
+background_color = "#0B4DB8"
+android = true
+ios =false
