@@ -48,6 +48,8 @@ def ViewStudentDetails(page: ft.Page):
             reg.value=item['reg_no']
             dept=item["Dept"]
             id=item['id']
+            page.session.store.set("fullname",item["fullname"]) 
+            page.session.store.set("reg_no",item["reg_no"])
             page.session.store.set("dept",dept)
             page.session.store.set("id",id)
             

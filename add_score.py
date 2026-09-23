@@ -16,6 +16,14 @@ def ViewAddScores(page: ft.Page):
     )
     dept=page.session.store.get("dept")
     ide=page.session.store.get("id")
+    reg_no=page.session.store.get("reg_no")
+    fullname=page.session.store.get("fullname")
+    t1=ft.Text("Emmanuel Eshiet", size=14, weight="bold", color="black")
+    t2=ft.Text("Reg No: 2023/CSC/001", size=12, color="#6B7280")
+    def scoredetails():
+        t1.value=fullname
+        t2.value=f"Reg No: {reg_no}"
+    scoredetails()    
     msg=ft.Text("",color="red")
     msg2=ft.Text("",color="green",weight="bold")
     firsttext=ft.Text(" ", size=12, color="#111827")
@@ -115,8 +123,8 @@ def ViewAddScores(page: ft.Page):
                             content=ft.Icon(ft.Icons.PERSON, color="#1565D8", size=28)
                         ),
                         ft.Column(spacing=2, controls=[
-                            ft.Text("Emmanuel Eshiet", size=14, weight="bold", color="black"),
-                            ft.Text("SS2 · 412", size=11, color="#6B7280")
+                            t1,
+                           t2,  
                         ])
                     ])
                 ),
