@@ -9,15 +9,15 @@ jobs:
           with:
             python-version: '3.11'
        -  uses: subosito/flutter-action@v2
-        with:
-          channel: stable
-          flutter-version: '3.22.2'
+          with:
+            channel: stable
+            flutter-version: '3.22.2'
        - name: Install flet
          run: pip install flet
        - name: Build APK
-        run: flet build apk
+         run: flet build apk
        - name: Upload APK
-        uses: actions/upload-artifact@v4
-        with:
+         uses: actions/upload-artifact@v4
+         with:
           name: apk
           path: build/apk
